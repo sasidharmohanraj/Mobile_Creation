@@ -61,10 +61,11 @@ public class MobileTest {
 		Scanner scn = new Scanner(System.in);
 		boolean r = true;
 		Mobile m=null;
+		System.out.println("Here you can create the Mobile with brand,price,RAM,ROM,Colour");
 		do
 		{
 			System.out.println("Select any one");
-			System.out.println("1.add\n2.fetch\n3.price\n4.change color\n5.Exit");
+			System.out.println("1.Add the Mobile Details\n2.Fetch the Details of Created Mobile\n3.Check the price of created mobiles\n4.Change the colour of the mobile\n5.Exit from the software");
 			int n=scn.nextInt();
 			switch (n) {
 			case 1: {
@@ -78,23 +79,24 @@ public class MobileTest {
 				int rom=scn.nextInt();
 				System.out.println("Enter Mobile Color");
 				String color=scn.next();
+				System.out.println("Moible created");
 				m = new Mobile(name, price, ram, rom, color);
 				break;
 			}
 			case 2:{
-				if(m==null) System.out.println("No mobiles");
+				if(m==null) System.out.println("First create the mobile and then fetch the detail");
 				else m.display();
 				break;
 			}
 			case 3:
 			{
-				if(m==null) System.out.println("No price found");
+				if(m==null) System.out.println("First create the mobile and then check the price of the mobile");
 				else System.out.println( m.getPrice());
 				break;
 			}
 			case 4:
 			{
-				if(m==null) System.out.println("no mobiles");
+				if(m==null) System.out.println("First create the mobile and then change the colour of the mobile");
 				else {
 					System.out.println("Old color "+m.getColor());
 					System.out.println("Enter new  color: ");
@@ -108,6 +110,7 @@ public class MobileTest {
 			{
 				r=false;
 				System.out.println("Thanks for visiting......");
+				System.out.println("come again......");
 					} break;
 			default:
 			{
